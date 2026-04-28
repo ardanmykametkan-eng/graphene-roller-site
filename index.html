@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Graphene Roller</title>
+<title>Graphene Roller — Графеновые композитные ролики</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -11,10 +11,9 @@
 html{scroll-behavior:smooth}
 body{font-family:Inter,sans-serif;background:#0a0a0f;color:#e0e0e0;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
-.lang-toggle{position:fixed;top:16px;right:16px;z-index:1000;display:flex;gap:4px;background:rgba(255,255,255,0.06);padding:4px;border-radius:50px;backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.1)}
+.lang-toggle{position:fixed;top:16px;right:16px;z-index:1000;display:flex;gap:4px;background:rgba(255,255,255,.06);padding:4px;border-radius:50px;border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(20px)}
 .lang-btn{padding:8px 16px;border:none;border-radius:50px;cursor:pointer;font-size:13px;font-weight:600;transition:all .25s;background:transparent;color:#666;font-family:inherit}
-.lang-btn.active{background:linear-gradient(135deg,#00c8ff,#64ffda);color:#000}
-.lang-btn:hover:not(.active){color:#fff}
+.lang-btn.active{background:linear-gradient(135deg,#00c8ff,#64ffda);color:#000}.lang-btn:hover:not(.active){color:#fff}
 .wa-float{position:fixed;bottom:28px;right:28px;z-index:999;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#25D366,#128C7E);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(37,211,102,.35);transition:all .3s;cursor:pointer;font-size:28px;color:#fff}
 .wa-float:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,.55)}
 nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(10,10,15,.92);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.06);padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:62px}
@@ -25,8 +24,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(10,10,15,.92
 .hamburger{display:none;flex-direction:column;gap:4px;cursor:pointer;padding:6px}
 .hamburger span{width:24px;height:2px;background:#fff;border-radius:2px;transition:all .3s}
 @media(max-width:860px){.nav-links{display:none;position:fixed;top:62px;left:0;right:0;background:rgba(10,10,15,.98);flex-direction:column;padding:18px;gap:6px;border-bottom:1px solid rgba(255,255,255,.06)}.nav-links.open{display:flex}.hamburger{display:flex}}
-.page{display:none;padding-top:62px}
-.page.active{display:block}
+.page{display:none;padding-top:62px}.page.active{display:block}
 section{padding:64px 24px;max-width:1140px;margin:0 auto}
 @media(max-width:600px){section{padding:44px 14px}}
 h1{font-size:42px;font-weight:800;line-height:1.12;margin-bottom:16px}
@@ -42,37 +40,37 @@ h3{font-size:17px;font-weight:600;margin-bottom:10px}
 .btn-wa{background:linear-gradient(135deg,#25D366,#128C7E);color:#fff}
 .btn-group{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
 .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:110px 24px 60px;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920') center/cover;opacity:.22;z-index:-1}
-.hero::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(0,200,255,.06),transparent 70%);z-index:-1}
+.hero::before{content:'';position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920') center/cover;opacity:.2;z-index:-1}
+.hero::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(0,200,255,.05),transparent 70%);z-index:-1}
 .hero h1{font-size:48px;max-width:800px;margin:0 auto 14px}
 @media(max-width:600px){.hero h1{font-size:30px}}
 .hero h1 span{background:linear-gradient(135deg,#00c8ff,#64ffda);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .hero p{font-size:17px;color:#aaa;max-width:620px;margin:0 auto 22px;line-height:1.6}
 .hero-phone{display:inline-block;padding:10px 24px;border-radius:50px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);font-weight:600;font-size:15px;transition:all .25s;margin-top:14px}
-.hero-phone:hover{border-color:#00c8ff;box-shadow:0 0 36px rgba(0,200,255,.26)}
+.hero-phone:hover{border-color:#00c8ff}
 .benefits-grid,.tech-grid,.service-grid,.news-grid,.products-grid,.projects-grid{display:grid;gap:18px}
 .benefits-grid{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
-.products-grid{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.products-grid{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
 .tech-grid,.service-grid{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-
 .projects-grid,.news-grid{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-.benefit-card,.product-card,.tech-card,.project-card,.service-card,.news-card,.contact-item{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:14px;transition:all .25s}
+.benefit-card,.tech-card,.project-card,.service-card,.news-card,.contact-item{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:14px;transition:all .25s}
 .benefit-card,.tech-card,.service-card,.news-card{padding:26px 20px}
-.product-card,.project-card{overflow:hidden}
+.product-card,.project-card{overflow:hidden;border-radius:14px}
 .product-card:hover,.project-card:hover,.benefit-card:hover,.tech-card:hover,.service-card:hover,.news-card:hover{border-color:rgba(0,200,255,.3);transform:translateY(-3px)}
 .benefit-card{text-align:center}
 .benefit-icon{font-size:34px;margin-bottom:10px}
 .benefit-card p,.tech-card p,.service-card p,.product-body p,.project-body p,.news-card p{font-size:13px;color:#888;line-height:1.5;margin-top:5px}
-.product-img{height:160px;background:linear-gradient(135deg,#1a1a2e,#0a2463);display:flex;align-items:center;justify-content:center;font-size:46px}
-.product-body,.project-body{padding:18px}
+.product-img{width:100%;height:200px;object-fit:cover;display:block;border-radius:14px 14px 0 0}
+.product-body{padding:18px}
 .product-body h3{font-size:15px;margin-bottom:5px}
 .product-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
 .product-tags span{padding:3px 10px;border-radius:50px;font-size:11px;background:rgba(0,200,255,.1);color:#64ffda}
-.project-img{height:150px;background:linear-gradient(135deg,#0a2463,#1a1a2e);display:flex;align-items:center;justify-content:center;font-size:42px}
+.project-img{height:150px;background:linear-gradient(135deg,#0a2463,#1a1a2e);display:flex;align-items:center;justify-content:center;font-size:42px;border-radius:14px 14px 0 0}
+.project-body{padding:18px;background:rgba(255,255,255,.03)}
 .project-body h3{font-size:15px}
 .service-num{font-size:26px;font-weight:800;color:#00c8ff;margin-bottom:6px}
 .news-date{font-size:11px;color:#666;margin-bottom:5px}
-.about-content{max-width:720px;margin:0 auto}
+.about-content{max-width:680px;margin:0 auto}
 .about-content p{font-size:14px;color:#aaa;line-height:1.7;margin-bottom:12px}
 .about-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:18px;margin-top:28px;text-align:center}
 .stat-num{font-size:28px;font-weight:800;background:linear-gradient(135deg,#00c8ff,#64ffda);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
@@ -93,7 +91,6 @@ h3{font-size:17px;font-weight:600;margin-bottom:10px}
 .contact-item h4{font-size:12px;color:#888;margin-bottom:3px}
 .contact-item p{font-weight:600;font-size:13px}
 .contact-item a{color:#00c8ff}
-.partner-tag{padding:8px 20px;border-radius:50px;background:rgba(0,200,255,.1);border:1px solid rgba(0,200,255,.2);font-weight:500;font-size:14px}
 footer{border-top:1px solid rgba(255,255,255,.06);padding:28px;text-align:center}
 footer p{font-size:12px;color:#666;margin-top:6px}
 footer a{color:#00c8ff}
@@ -110,7 +107,7 @@ footer a{color:#00c8ff}
 <a href="https://wa.me/77022655423" target="_blank" class="wa-float" title="WhatsApp">💬</a>
 
 <nav>
-  <div class="logo">&#10022; GRAPHENE ROLLER</div>
+  <div class="logo">✦ GRAPHENE ROLLER</div>
   <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
   <div class="nav-links" id="navLinks">
     <a href="#home" class="active" data-page="home" onclick="navigate('home')" data-i18n="nav_home"></a>
@@ -178,12 +175,12 @@ footer a{color:#00c8ff}
   <section style="padding-top:0;text-align:center">
     <h2><span data-i18n="global_title"></span></h2>
     <p class="subtitle" data-i18n="global_sub"></p>
-    <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:20px">
-      <span class="partner-tag" data-i18n="kz"></span>
-      <span class="partner-tag" data-i18n="uz"></span>
-      <span class="partner-tag" data-i18n="kg"></span>
-      <span class="partner-tag" data-i18n="tj"></span>
-      <span class="partner-tag" data-i18n="tm"></span>
+    <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:20px;font-size:16px">
+      <span data-i18n="kz"></span>
+      <span data-i18n="uz"></span>
+      <span data-i18n="kg"></span>
+      <span data-i18n="tj"></span>
+      <span data-i18n="tm"></span>
     </div>
   </section>
 </div>
@@ -193,12 +190,30 @@ footer a{color:#00c8ff}
     <h2><span data-i18n="prod_title"></span></h2>
     <p class="subtitle" data-i18n="prod_sub"></p>
     <div class="products-grid">
-      <div class="product-card"><div class="product-img">⚙️</div><div class="product-body"><h3 data-i18n="prod1_title"></h3><p data-i18n="prod1_desc"></p><div class="product-tags"><span data-i18n="tag_wear"></span><span data-i18n="tag_uni"></span></div></div></div>
-      <div class="product-card"><div class="product-img">🛡️</div><div class="product-body"><h3 data-i18n="prod2_title"></h3><p data-i18n="prod2_desc"></p><div class="product-tags"><span data-i18n="tag_impact"></span><span data-i18n="tag_mine"></span></div></div></div>
-      <div class="product-card"><div class="product-img">🔄</div><div class="product-body"><h3 data-i18n="prod3_title"></h3><p data-i18n="prod3_desc"></p><div class="product-tags"><span data-i18n="tag_auto"></span><span data-i18n="tag_center"></span></div></div></div>
-      <div class="product-card"><div class="product-img">🧪</div><div class="product-body"><h3 data-i18n="prod4_title"></h3><p data-i18n="prod4_desc"></p><div class="product-tags"><span data-i18n="tag_anticorr"></span><span data-i18n="tag_chem"></span></div></div></div>
-      <div class="product-card"><div class="product-img">❄️</div><div class="product-body"><h3 data-i18n="prod5_title"></h3><p data-i18n="prod5_desc"></p><div class="product-tags"><span data-i18n="tag_frost"></span><span data-i18n="tag_custom"></span></div></div></div>
-      <div class="product-card"><div class="product-img">🏗️</div><div class="product-body"><h3 data-i18n="prod6_title"></h3><p data-i18n="prod6_desc"></p><div class="product-tags"><span data-i18n="tag_fullset"></span><span data-i18n="tag_turnkey"></span></div></div></div>
+      <div class="product-card">
+        <img src="https://ardanmykametkan-eng.github.io/graphene-roller-site/images/roller-single.jpg" alt="Standard Roller" class="product-img" loading="lazy">
+        <div class="product-body">
+          <h3 data-i18n="prod1_title"></h3>
+          <p data-i18n="prod1_desc"></p>
+          <div class="product-tags"><span data-i18n="tag_wear"></span><span data-i18n="tag_uni"></span></div>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://ardanmykametkan-eng.github.io/graphene-roller-site/images/roller-set.jpg" alt="Buffer Rollers" class="product-img" loading="lazy">
+        <div class="product-body">
+          <h3 data-i18n="prod2_title"></h3>
+          <p data-i18n="prod2_desc"></p>
+          <div class="product-tags"><span data-i18n="tag_impact"></span><span data-i18n="tag_mine"></span></div>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://ardanmykametkan-eng.github.io/graphene-roller-site/images/roller-big.jpg" alt="Self-Aligning Group" class="product-img" loading="lazy">
+        <div class="product-body">
+          <h3 data-i18n="prod3_title"></h3>
+          <p data-i18n="prod3_desc"></p>
+          <div class="product-tags"><span data-i18n="tag_auto"></span><span data-i18n="tag_center"></span></div>
+        </div>
+      </div>
     </div>
   </section>
 </div>
@@ -254,7 +269,7 @@ footer a{color:#00c8ff}
       <div class="service-card"><div class="service-num">03</div><h3 data-i18n="s3_title"></h3><p data-i18n="s3_desc"></p></div>
       <div class="service-card"><div class="service-num">04</div><h3 data-i18n="s4_title"></h3><p data-i18n="s4_desc"></p></div>
       <div class="service-card"><div class="service-num">05</div><h3 data-i18n="s5_title"></h3><p data-i18n="s5_desc"></p></div>
-      <div class="service-card"><div class="service-num">06</div><h3 data-i18n="s6_title"></h3><p data-i18n="s6_desc"></p><a href="#" style="display:inline-block;margin-top:8px;padding:6px 16px;border-radius:50px;background:rgba(0,200,255,.1);border:1px solid rgba(0,200,255,.3);font-size:12px;" data-i18n="s6_btn"></a></div>
+      <div class="service-card"><div class="service-num">06</div><h3 data-i18n="s6_title"></h3><p data-i18n="s6_desc"></p><a href="#" style="display:inline-block;margin-top:8px;padding:6px 16px;border-radius:50px;background:rgba(0,200,255,.1);border:1px solid rgba(0,200,255,.3);font-size:12px;color:#fff" data-i18n="s6_btn"></a></div>
     </div>
   </section>
 </div>
@@ -264,9 +279,9 @@ footer a{color:#00c8ff}
     <h2><span data-i18n="news_title"></span></h2>
     <p class="subtitle" data-i18n="news_sub"></p>
     <div class="news-grid">
-      <div class="news-card"><div class="news-date" data-i18n="n_date1">15.04.2026</div><h3 data-i18n="n1_title"></h3><p data-i18n="n1_desc"></p></div>
-      <div class="news-card"><div class="news-date" data-i18n="n_date2">02.04.2026</div><h3 data-i18n="n2_title"></h3><p data-i18n="n2_desc"></p></div>
-      <div class="news-card"><div class="news-date" data-i18n="n_date3">18.03.2026</div><h3 data-i18n="n3_title"></h3><p data-i18n="n3_desc"></p></div>
+      <div class="news-card"><div class="news-date" data-i18n="n_date1"></div><h3 data-i18n="n1_title"></h3><p data-i18n="n1_desc"></p></div>
+      <div class="news-card"><div class="news-date" data-i18n="n_date2"></div><h3 data-i18n="n2_title"></h3><p data-i18n="n2_desc"></p></div>
+      <div class="news-card"><div class="news-date" data-i18n="n_date3"></div><h3 data-i18n="n3_title"></h3><p data-i18n="n3_desc"></p></div>
     </div>
   </section>
 </div>
@@ -303,403 +318,20 @@ footer a{color:#00c8ff}
       <div class="contact-item"><div class="icon">📞</div><h4 data-i18n="cont_phone"></h4><p><a href="tel:+77022655423">+7 702 265 5423</a></p></div>
       <div class="contact-item"><div class="icon">💬</div><h4 data-i18n="cont_wa"></h4><p><a href="https://wa.me/77022655423" target="_blank">+7 702 265 5423</a></p></div>
       <div class="contact-item"><div class="icon">📧</div><h4 data-i18n="cont_email"></h4><p><a href="mailto:info@grapheneroller.com">info@grapheneroller.com</a></p></div>
-      <div class="contact-item"><div class="icon">🌐</div><h4 data-i18n="cont_tg"></h4><p><a href="https://t.me/grapheneroller" target="_blank">@grapheneroller</a></p></div>
+      <div class="contact-item"><div class="icon">🌐</div><h4 data-i18n="cont_tg"></h4><p><a href="https://t.me/grapheneroller">@grapheneroller</a></p></div>
     </div>
   </section>
 </div>
 
 <footer>
-  <div class="logo" style="font-size:18px;margin-bottom:12px">&#10022; GRAPHENE ROLLER</div>
+  <div class="logo" style="font-size:18px;margin-bottom:12px">✦ GRAPHENE ROLLER</div>
   <p data-i18n="footer_p"></p>
   <p style="margin-top:10px">📞 <a href="tel:+77022655423" style="color:#00c8ff">+7 702 265 5423</a> &nbsp;·&nbsp; 💬 <a href="https://wa.me/77022655423" target="_blank" style="color:#25D366">WhatsApp</a></p>
   <p style="margin-top:12px;font-size:11px;color:#444">&copy; 2026 Graphene Roller. All rights reserved.</p>
 </footer>
 
 <script>
-// i18n data
-const i18n = {
-  "ru": {
-    "nav_home": "Главная",
-    "nav_prod": "Продукты",
-    "nav_tech": "Технологии",
-    "nav_proj": "Проекты",
-    "nav_about": "О нас",
-    "nav_serv": "Сервис",
-    "nav_news": "Новости",
-    "nav_cont": "Контакты",
-    "hero_title": "<span>Graphene Roller</span><br>Супер-износостойкие & Антикоррозионные",
-    "hero_desc": "Высокопрочные графеновые композитные ролики для суровых условий Центральной Азии. Морозостойкость до −40°C, полная герметизация, пылезащита.",
-    "hero_btn1": "Каталог продукции",
-    "hero_btn2": "Бесплатный запрос",
-    "benefits_title": "Ключевые преимущества",
-    "b1_title": "Износостойкость +300%",
-    "b1_desc": "Графеновое усиление увеличивает срок службы в 3 раза",
-    "b2_title": "Полная герметизация",
-    "b2_desc": "Защита от пыли и воды для открытых карьеров и шахт",
-    "b3_title": "Морозостойкость −40°C",
-    "b3_desc": "Адаптированы для суровых зим Центральной Азии",
-    "b4_title": "Без обслуживания",
-    "b4_desc": "Снижение эксплуатационных расходов на шахтах и заводах",
-    "home_form_title": "Индивидуальное предложение",
-    "home_form_sub": "Оставьте заявку — мы подберем оптимальное решение",
-    "form_name": "ФИО",
-    "form_country": "Страна",
-    "form_phone": "Телефон / WhatsApp",
-    "form_email": "Email",
-    "form_product": "Тип продукции",
-    "form_msg": "Объем / пожелания",
-    "form_msg_ph": "Количество, размеры...",
-    "form_btn": "📩 Отправить запрос",
-    "p1": "Стандартные ролики",
-    "p2": "Буферные ролики",
-    "p3": "Самоустанавливающиеся",
-    "p4": "Коррозионностойкие",
-    "p5": "Морозостойкие",
-    "p6": "Полный комплект",
-    "global_title": "Глобальное присутствие",
-    "global_sub": "Центральная Азия — наш основной регион",
-    "kz": "Казахстан",
-    "uz": "Узбекистан",
-    "kg": "Кыргызстан",
-    "tj": "Таджикистан",
-    "tm": "Туркменистан",
-    "prod_title": "Каталог продукции",
-    "prod_sub": "Полный ассортимент графеновых роликов",
-    "prod1_title": "Стандартные желобчатые ролики",
-    "prod1_desc": "Базовые ролики общего назначения с графеновым усилением. Срок службы выше в 2–3 раза.",
-    "prod2_title": "Буферные ролики",
-    "prod2_desc": "Усиленные для зон загрузки шахт. Амортизация ударов и защита ленты.",
-    "prod3_title": "Самоустанавливающиеся группы",
-    "prod3_desc": "Автоматическое центрирование ленты. Снижение износа и простоев.",
-    "prod4_title": "Коррозионностойкие ролики",
-    "prod4_desc": "Спецпокрытие для химических заводов, солончаков, агрессивных сред.",
-    "prod5_title": "Морозостойкие ролики",
-    "prod5_desc": "Индивидуальные решения для суровых зим. Работа до −40°C.",
-    "prod6_title": "Полный комплект конвейера",
-    "prod6_desc": "Барабаны, рамы, уплотнения, ролики — всё в одном наборе. Под ключ.",
-    "tag_wear": "Износостойкие",
-    "tag_uni": "Универсальные",
-    "tag_impact": "Ударопрочные",
-    "tag_mine": "Шахтные",
-    "tag_auto": "Автоматические",
-    "tag_center": "Центрирование",
-    "tag_anticorr": "Антикоррозия",
-    "tag_chem": "Химия",
-    "tag_frost": "Морозостойкие",
-    "tag_custom": "Индивидуальные",
-    "tag_fullset": "Комплектные",
-    "tag_turnkey": "Под ключ",
-    "tech_title": "Наши технологии",
-    "tech_sub": "Графеновые материалы, подтвержденные испытаниями",
-    "t1_title": "Материаловедение графена",
-    "t1_desc": "Графеновые нанопластинки создают многослойную защиту. Повышение износостойкости и снижение трения.",
-    "t2_title": "Автоматизированное производство",
-    "t2_desc": "Роботизированные линии, точность ±0.1 мм. 12 этапов контроля качества.",
-    "t3_title": "Испытания на прочность",
-    "t3_desc": "Износостойкость +300%, коррозия +400%, эластичность при −40°C.",
-    "t4_title": "Патенты и сертификаты",
-    "t4_desc": "ISO 9001:2015, CE, EAC. Международные патенты.",
-    "proj_title": "Реализованные проекты",
-    "proj_sub": "Центральная Азия — наши ключевые проекты",
-    "proj1_title": "Угольная шахта, Казахстан",
-    "proj1_desc": "Полная замена роликов на графеновые. Срок службы с 8 до 24 мес. Простои −60%.",
-    "proj2_title": "Цементный завод, Узбекистан",
-    "proj2_desc": "Коррозионностойкие ролики. Экономия на обслуживании 40% в год.",
-    "proj3_title": "Горнорудный комбинат, Кыргызстан",
-    "proj3_desc": "Морозостойкие ролики для высокогорья. Работа при −35°C без отказов.",
-    "about_title": "О компании",
-    "about_p1": "Мы — международная компания, специализирующаяся на производстве конвейерных компонентов из графеновых композитных материалов.",
-    "about_p2": "Мы предлагаем комплексные трансграничные услуги: индивидуальный подбор, техсопровождение, помощь с таможенной документацией на русском языке.",
-    "stat1": "м² производства",
-    "stat2": "реализованных проектов",
-    "stat3": "стран экспорта",
-    "stat4": "CE · EAC сертификаты",
-    "serv_title": "Экспортный сервис",
-    "serv_sub": "Полный цикл поддержки внешнеторговых операций",
-    "s1_title": "Индивидуальное изготовление",
-    "s1_desc": "Ролики по вашим размерам и чертежам.",
-    "s2_title": "Документация на русском",
-    "s2_desc": "Паспорта, сертификаты, таможенная документация.",
-    "s3_title": "Логистика в ЦА",
-    "s3_desc": "Авто-, ж/д и морские перевозки для Центральной Азии.",
-    "s4_title": "Гарантия и сервис",
-    "s4_desc": "Послепродажное обслуживание. Техподдержка с выездом.",
-    "s5_title": "Оптовые скидки",
-    "s5_desc": "Спецусловия для дилеров. Гибкая система скидок.",
-    "s6_title": "PDF-каталог",
-    "s6_desc": "Скачайте каталог на русском или английском.",
-    "s6_btn": "📥 Скачать PDF",
-    "news_title": "Новости и обновления",
-    "news_sub": "Отраслевые новости и обновления",
-    "n1_title": "Партия морозостойких роликов в Казахстан",
-    "n1_desc": "5000 комплектов для угольной шахты в Караганде. Срок службы — 3 года.",
-    "n2_title": "Новая линия графеновых композитов",
-    "n2_desc": "Мощность +40%, срок поставки до 15 дней.",
-    "n3_title": "Сертификация EAC для всей продукции",
-    "n3_desc": "Получен сертификат Евразийского союза на всю линейку.",
-    "contact_title": "Свяжитесь с нами",
-    "contact_sub": "Готовы обсудить ваш проект. Отвечаем в течение 2 часов",
-    "cont_phone": "Телефон",
-    "cont_wa": "WhatsApp",
-    "cont_email": "Email",
-    "cont_tg": "Telegram",
-    "footer_p": "Графеновые композитные ролики для Центральной Азии"
-  },
-  "en": {
-    "nav_home": "Home",
-    "nav_prod": "Products",
-    "nav_tech": "Technology",
-    "nav_proj": "Projects",
-    "nav_about": "About Us",
-    "nav_serv": "Service",
-    "nav_news": "News",
-    "nav_cont": "Contact",
-    "hero_title": "<span>Graphene Roller</span><br>Super Wear-Resistant & Anti-Corrosion",
-    "hero_desc": "High-strength graphene composite rollers for harsh Central Asian conditions. Frost resistance to −40°C, full sealing, dust protection.",
-    "hero_btn1": "Product Catalog",
-    "hero_btn2": "Free Inquiry",
-    "benefits_title": "Key Benefits",
-    "b1_title": "Wear Resistance +300%",
-    "b1_desc": "Graphene reinforcement triples service life",
-    "b2_title": "Full Sealing",
-    "b2_desc": "Dust and water protection for open pits and mines",
-    "b3_title": "Frost Resistance −40°C",
-    "b3_desc": "Specially adapted for harsh Central Asian winters",
-    "b4_title": "Maintenance Free",
-    "b4_desc": "Reduced operating costs at mines and plants",
-    "home_form_title": "Custom Quote",
-    "home_form_sub": "Leave a request — we will find the optimal solution",
-    "form_name": "Full Name",
-    "form_country": "Country",
-    "form_phone": "Phone / WhatsApp",
-    "form_email": "Email",
-    "form_product": "Product Type",
-    "form_msg": "Quantity / Requirements",
-    "form_msg_ph": "Quantity, dimensions...",
-    "form_btn": "📩 Send Inquiry",
-    "p1": "Standard Rollers",
-    "p2": "Buffer Rollers",
-    "p3": "Self-Aligning",
-    "p4": "Anti-Corrosion",
-    "p5": "Frost-Resistant",
-    "p6": "Full Set",
-    "global_title": "Global Presence",
-    "global_sub": "Central Asia is our main region",
-    "kz": "Kazakhstan",
-    "uz": "Uzbekistan",
-    "kg": "Kyrgyzstan",
-    "tj": "Tajikistan",
-    "tm": "Turkmenistan",
-    "prod_title": "Product Catalog",
-    "prod_sub": "Complete range of graphene rollers",
-    "prod1_title": "Standard Trough Rollers",
-    "prod1_desc": "General purpose rollers with graphene reinforcement. 2–3x longer service life.",
-    "prod2_title": "Buffer Rollers",
-    "prod2_desc": "Reinforced for mine loading zones. Impact absorption and belt protection.",
-    "prod3_title": "Self-Aligning Groups",
-    "prod3_desc": "Automatic belt centering. Reduced wear and downtime.",
-    "prod4_title": "Anti-Corrosion Rollers",
-    "prod4_desc": "Special coating for chemical plants, salt marshes, aggressive environments.",
-    "prod5_title": "Frost-Resistant Rollers",
-    "prod5_desc": "Custom solutions for severe winters. Operation down to −40°C.",
-    "prod6_title": "Full Conveyor Kit",
-    "prod6_desc": "Drums, frames, seals, rollers — all in one package. Turnkey.",
-    "tag_wear": "Wear-Resistant",
-    "tag_uni": "Universal",
-    "tag_impact": "Impact-Resistant",
-    "tag_mine": "Mining",
-    "tag_auto": "Automatic",
-    "tag_center": "Centering",
-    "tag_anticorr": "Anti-Corrosion",
-    "tag_chem": "Chemical",
-    "tag_frost": "Frost-Resistant",
-    "tag_custom": "Custom",
-    "tag_fullset": "Complete",
-    "tag_turnkey": "Turnkey",
-    "tech_title": "Our Technology",
-    "tech_sub": "Graphene materials confirmed by testing",
-    "t1_title": "Graphene Material Science",
-    "t1_desc": "Graphene nanoplatelets create multi-layer protection. Increased wear resistance, reduced friction.",
-    "t2_title": "Automated Production",
-    "t2_desc": "Robotic lines, precision ±0.1mm. 12 quality control stages.",
-    "t3_title": "Strength Testing",
-    "t3_desc": "Wear resistance +300%, corrosion resistance +400%, elasticity at −40°C.",
-    "t4_title": "Patents & Certificates",
-    "t4_desc": "ISO 9001:2015, CE, EAC. International patents.",
-    "proj_title": "Completed Projects",
-    "proj_sub": "Central Asia — our key projects",
-    "proj1_title": "Coal Mine, Kazakhstan",
-    "proj1_desc": "Full replacement with graphene rollers. Service life 8→24 months. Downtime −60%.",
-    "proj2_title": "Cement Plant, Uzbekistan",
-    "proj2_desc": "Anti-corrosion rollers. 40% annual maintenance savings.",
-    "proj3_title": "Mining Complex, Kyrgyzstan",
-    "proj3_desc": "Frost-resistant rollers for high altitude. Operation at −35°C.",
-    "about_title": "About Us",
-    "about_p1": "We are an international company specializing in conveyor components made from graphene composite materials.",
-    "about_p2": "We offer comprehensive cross-border services: custom sizing, technical support, customs documentation assistance.",
-    "stat1": "m² production area",
-    "stat2": "completed projects",
-    "stat3": "export countries",
-    "stat4": "CE · EAC certified",
-    "serv_title": "Export Service",
-    "serv_sub": "Full support cycle for foreign trade operations",
-    "s1_title": "Custom Manufacturing",
-    "s1_desc": "Rollers to your dimensions and drawings.",
-    "s2_title": "Documentation in Russian",
-    "s2_desc": "Passports, certificates, customs documents.",
-    "s3_title": "Logistics to CA",
-    "s3_desc": "Truck, rail and sea transport for Central Asia.",
-    "s4_title": "Warranty & Service",
-    "s4_desc": "After-sales service. On-site technical support.",
-    "s5_title": "Wholesale Discounts",
-    "s5_desc": "Special dealer terms. Flexible volume discounts.",
-    "s6_title": "PDF Catalog",
-    "s6_desc": "Download catalog in Russian or English.",
-    "s6_btn": "📥 Download PDF",
-    "news_title": "News & Updates",
-    "news_sub": "Industry news and company updates",
-    "n1_title": "Frost-resistant rollers shipped to Kazakhstan",
-    "n1_desc": "5,000 sets for a coal mine in Karaganda. 3-year service life.",
-    "n2_title": "New graphene composite production line",
-    "n2_desc": "Capacity +40%, delivery time 15 days.",
-    "n3_title": "EAC certification for all products",
-    "n3_desc": "Eurasian Union certificate for the entire line.",
-    "contact_title": "Contact Us",
-    "contact_sub": "Ready to discuss your project. Reply within 2 hours",
-    "cont_phone": "Phone",
-    "cont_wa": "WhatsApp",
-    "cont_email": "Email",
-    "cont_tg": "Telegram",
-    "footer_p": "Graphene composite rollers for Central Asia"
-  },
-  "kk": {
-    "nav_home": "Басты бет",
-    "nav_prod": "Өнімдер",
-    "nav_tech": "Технологиялар",
-    "nav_proj": "Жобалар",
-    "nav_about": "Біз туралы",
-    "nav_serv": "Қызметтер",
-    "nav_news": "Жаңалықтар",
-    "nav_cont": "Байланыс",
-    "hero_title": "<span>Graphene Roller</span><br>Өте тозуға төзімді & Коррозияға қарсы",
-    "hero_desc": "Орталық Азияның қатал жағдайларына арналған графенді композиттік роликтер. −40°C аязға төзімділік, толық герметизация, шаңнан қорғаныс.",
-    "hero_btn1": "Өнімдер каталогы",
-    "hero_btn2": "Тегін сұраныс",
-    "benefits_title": "Негізгі артықшылықтар",
-    "b1_title": "Тозуға төзімділік +300%",
-    "b1_desc": "Графенді күшейту қызмет мерзімін 3 есе арттырады",
-    "b2_title": "Толық герметизация",
-    "b2_desc": "Шаң мен судан қорғаныс — ашық карьерлер мен шахталар үшін",
-    "b3_title": "−40°C аязға төзімділік",
-    "b3_desc": "Орталық Азияның суық қыстарына бейімделген",
-    "b4_title": "Қызмет көрсетусіз",
-    "b4_desc": "Шахталар мен зауыттарда пайдалану шығындарын азайту",
-    "home_form_title": "Жеке ұсыныс",
-    "home_form_sub": "Өтініш қалдырыңыз — біз оңтайлы шешімді таңдаймыз",
-    "form_name": "Аты-жөні",
-    "form_country": "Ел",
-    "form_phone": "Телефон / WhatsApp",
-    "form_email": "Email",
-    "form_product": "Өнім түрі",
-    "form_msg": "Көлемі / талаптар",
-    "form_msg_ph": "Саны, өлшемдері...",
-    "form_btn": "📩 Сұраныс жіберу",
-    "p1": "Стандартты роликтер",
-    "p2": "Буферлік роликтер",
-    "p3": "Өздігінен орнатылатын",
-    "p4": "Коррозияға төзімді",
-    "p5": "Аязға төзімді",
-    "p6": "Толық жинақ",
-    "global_title": "Әлемдік қатысу",
-    "global_sub": "Орталық Азия — біздің негізгі аймақ",
-    "kz": "Қазақстан",
-    "uz": "Өзбекстан",
-    "kg": "Қырғызстан",
-    "tj": "Тәжікстан",
-    "tm": "Түрікменстан",
-    "prod_title": "Өнімдер каталогы",
-    "prod_sub": "Графенді роликтердің толық ассортименті",
-    "prod1_title": "Стандартты ойықты роликтер",
-    "prod1_desc": "Графенді күшейтілген жалпы мақсаттағы роликтер. Қызмет мерзімі 2–3 есе жоғары.",
-    "prod2_title": "Буферлік роликтер",
-    "prod2_desc": "Шахталардың тиеу аймақтарына арналған күшейтілген. Соққыны амортизациялау.",
-    "prod3_title": "Өздігінен орнатылатын топтар",
-    "prod3_desc": "Лентаны автоматты центрлеу. Тозу мен тоқтауларды азайту.",
-    "prod4_title": "Коррозияға төзімді роликтер",
-    "prod4_desc": "Химия зауыттары мен агрессивті ортаға арналған арнайы жабын.",
-    "prod5_title": "Аязға төзімді роликтер",
-    "prod5_desc": "Қатал қыстарға арналған жеке шешімдер. −40°C дейін жұмыс.",
-    "prod6_title": "Конвейердің толық жинағы",
-    "prod6_desc": "Барабандар, рамалар, тығыздауыштар — бір жинақта. Кілт тапсыру.",
-    "tag_wear": "Тозуға төзімді",
-    "tag_uni": "Әмбебап",
-    "tag_impact": "Соққыға төзімді",
-    "tag_mine": "Шахталық",
-    "tag_auto": "Автоматты",
-    "tag_center": "Центрлеу",
-    "tag_anticorr": "Коррозияға қарсы",
-    "tag_chem": "Химия",
-    "tag_frost": "Аязға төзімді",
-    "tag_custom": "Жеке",
-    "tag_fullset": "Жинақтық",
-    "tag_turnkey": "Кілт тапсыру",
-    "tech_title": "Біздің технологиялар",
-    "tech_sub": "Графен материалдары сынақтармен расталған",
-    "t1_title": "Графен материалтану",
-    "t1_desc": "Графенді нанопластиналар көпқабатты қорғаныс жасайды. Тозуға төзімділік артады.",
-    "t2_title": "Автоматтандырылған өндіріс",
-    "t2_desc": "Роботтандырылған желілер, дәлдік ±0.1 мм. 12 сапа бақылау кезеңі.",
-    "t3_title": "Беріктік сынақтары",
-    "t3_desc": "Тозуға төзімділік +300%, коррозия +400%, −40°C серпімділік.",
-    "t4_title": "Патенттер мен сертификаттар",
-    "t4_desc": "ISO 9001:2015, CE, EAC. Халықаралық патенттер.",
-    "proj_title": "Іске асырылған жобалар",
-    "proj_sub": "Орталық Азия — біздің негізгі жобалар",
-    "proj1_title": "Көмір шахтасы, Қазақстан",
-    "proj1_desc": "Графенді роликтерге толық ауыстыру. Қызмет мерзімі 8→24 ай. Тоқтаулар −60%.",
-    "proj2_title": "Цемент зауыты, Өзбекстан",
-    "proj2_desc": "Коррозияға төзімді роликтер. Қызмет көрсетуге 40% үнемдеу.",
-    "proj3_title": "Тау-кен комбинаты, Қырғызстан",
-    "proj3_desc": "Биік тауға арналған аязға төзімді роликтер. −35°C жұмыс.",
-    "about_title": "Біз туралы",
-    "about_p1": "Біз — графенді композиттік материалдардан конвейер компоненттерін өндіруге маманданған халықаралық компания.",
-    "about_p2": "Біз кешенді трансшекаралық қызметтерді ұсынамыз: жеке өлшемдер, техникалық қолдау, кедендік құжаттама.",
-    "stat1": "м² өндіріс алаңы",
-    "stat2": "іске асырылған жоба",
-    "stat3": "экспорт елдері",
-    "stat4": "CE · EAC сертификаттары",
-    "serv_title": "Экспорттық қызмет",
-    "serv_sub": "Сыртқы сауда операцияларын толық қолдау",
-    "s1_title": "Жеке өндіріс",
-    "s1_desc": "Сіздің өлшемдеріңіз бен сызбаларыңыз бойынша роликтер.",
-    "s2_title": "Орыс тіліндегі құжаттама",
-    "s2_desc": "Паспорттар, сертификаттар, кедендік құжаттар.",
-    "s3_title": "ОА-ға логистика",
-    "s3_desc": "Орталық Азияға автомобиль, теміржол және теңіз тасымалы.",
-    "s4_title": "Кепілдік және сервис",
-    "s4_desc": "Сатудан кейінгі қызмет. Техникалық қолдау.",
-    "s5_title": "Көтерме жеңілдіктер",
-    "s5_desc": "Дилерлерге арнайы шарттар. Икемді жеңілдік жүйесі.",
-    "s6_title": "PDF-каталог",
-    "s6_desc": "Каталогты орыс немесе ағылшын тілінде жүктеп алыңыз.",
-    "s6_btn": "📥 PDF жүктеу",
-    "news_title": "Жаңалықтар",
-    "news_sub": "Сала жаңалықтары мен жаңартулар",
-    "n1_title": "Аязға төзімді роликтер Қазақстанға жіберілді",
-    "n1_desc": "Қарағандыдағы көмір шахтасына 5000 жинақ. Қызмет мерзімі 3 жыл.",
-    "n2_title": "Графенді композиттердің жаңа желісі",
-    "n2_desc": "Қуаттылық +40%, жеткізу мерзімі 15 күн.",
-    "n3_title": "Барлық өнімге EAC сертификациясы",
-    "n3_desc": "Еуразиялық Одақтың сертификаты алынды.",
-    "contact_title": "Бізбен байланысыңыз",
-    "contact_sub": "Жобаңызды талқылауға дайынбыз. 2 сағат ішінде жауап береміз",
-    "cont_phone": "Телефон",
-    "cont_wa": "WhatsApp",
-    "cont_email": "Email",
-    "cont_tg": "Telegram",
-    "footer_p": "Орталық Азияға арналған графенді композиттік роликтер"
-  }
-};
+const i18n = {"ru":{"nav_home":"Главная","nav_prod":"Продукты","nav_tech":"Технологии","nav_proj":"Проекты","nav_about":"О нас","nav_serv":"Сервис","nav_news":"Новости","nav_cont":"Контакты","hero_title":"<span>Graphene Roller</span><br>Супер-износостойкие & Антикоррозионные","hero_desc":"Высокопрочные графеновые композитные ролики для суровых условий Центральной Азии. Морозостойкость до −40°C, полная герметизация, пылезащита.","hero_btn1":"Каталог продукции","hero_btn2":"Бесплатный запрос","benefits_title":"Ключевые преимущества","b1_title":"Износостойкость +300%","b1_desc":"Графеновое усиление увеличивает срок службы в 3 раза","b2_title":"Полная герметизация","b2_desc":"Защита от пыли и воды для открытых карьеров и шахт","b3_title":"Морозостойкость −40°C","b3_desc":"Адаптированы для суровых зим Центральной Азии","b4_title":"Без обслуживания","b4_desc":"Снижение эксплуатационных расходов на шахтах и заводах","home_form_title":"Индивидуальное предложение","home_form_sub":"Оставьте заявку — мы подберем оптимальное решение","form_name":"ФИО","form_country":"Страна","form_phone":"Телефон / WhatsApp","form_email":"Email","form_product":"Тип продукции","form_msg":"Объем / пожелания","form_msg_ph":"Количество, размеры...","form_btn":"📩 Отправить запрос","p1":"Стандартные ролики","p2":"Буферные ролики","p3":"Самоустанавливающиеся","p4":"Коррозионностойкие","p5":"Морозостойкие","p6":"Полный комплект","global_title":"Глобальное присутствие","global_sub":"Центральная Азия — наш основной регион","kz":"🇰🇿 Казахстан","uz":"🇺🇿 Узбекистан","kg":"🇰🇬 Кыргызстан","tj":"🇹🇯 Таджикистан","tm":"🇹🇲 Туркменистан","prod_title":"Каталог продукции","prod_sub":"Полный ассортимент графеновых роликов","prod1_title":"Стандартные желобчатые ролики","prod1_desc":"Базовые ролики общего назначения с графеновым усилением. Срок службы выше в 2–3 раза.","prod2_title":"Буферные ролики","prod2_desc":"Усиленные для зон загрузки шахт. Амортизация ударов и защита ленты.","prod3_title":"Самоустанавливающиеся группы","prod3_desc":"Автоматическое центрирование ленты. Снижение износа и простоев.","tag_wear":"Износостойкие","tag_uni":"Универсальные","tag_impact":"Ударопрочные","tag_mine":"Шахтные","tag_auto":"Автоматические","tag_center":"Центрирование","tech_title":"Наши технологии","tech_sub":"Графеновые материалы, подтвержденные испытаниями","t1_title":"Материаловедение графена","t1_desc":"Графеновые нанопластинки создают многослойную защиту.","t2_title":"Автоматизированное производство","t2_desc":"Роботизированные линии, точность ±0.1 мм.","t3_title":"Испытания на прочность","t3_desc":"Износостойкость +300%, коррозия +400%, эластичность при −40°C.","t4_title":"Патенты и сертификаты","t4_desc":"ISO 9001:2015, CE, EAC. Международные патенты.","proj_title":"Реализованные проекты","proj_sub":"Центральная Азия — наши ключевые проекты","proj1_title":"Угольная шахта, Казахстан","proj1_desc":"Полная замена роликов на графеновые. Срок службы с 8 до 24 мес.","proj2_title":"Цементный завод, Узбекистан","proj2_desc":"Коррозионностойкие ролики. Экономия 40% в год.","proj3_title":"ГРК, Кыргызстан","proj3_desc":"Морозостойкие ролики для высокогорья. Работа при −35°C.","about_title":"О компании","about_p1":"Мы — международная компания по производству конвейерных компонентов из графеновых композитных материалов.","about_p2":"Комплексные трансграничные услуги: подбор, техсопровождение, таможня.","stat1":"м² производства","stat2":"реализованных проектов","stat3":"стран экспорта","stat4":"CE · EAC","serv_title":"Экспортный сервис","serv_sub":"Полный цикл поддержки внешнеторговых операций","s1_title":"Индивидуальное изготовление","s1_desc":"Ролики по вашим размерам и чертежам.","s2_title":"Документация на русском","s2_desc":"Паспорта, сертификаты, таможня.","s3_title":"Логистика в ЦА","s3_desc":"Авто-, ж/д и морские перевозки для ЦА.","s4_title":"Гарантия и сервис","s4_desc":"Послепродажное обслуживание. Выездная поддержка.","s5_title":"Оптовые скидки","s5_desc":"Спецусловия для дилеров.","s6_title":"PDF-каталог","s6_desc":"Скачайте каталог на русском или английском.","s6_btn":"📥 Скачать PDF","news_title":"Новости и обновления","news_sub":"Отраслевые новости","n_date1":"15.04.2026","n1_title":"Морозостойкие ролики в Казахстан","n1_desc":"5000 комплектов для шахты в Караганде.","n_date2":"02.04.2026","n2_title":"Новая линия производства","n2_desc":"Мощность +40%, поставка до 15 дней.","n_date3":"18.03.2026","n3_title":"Сертификация EAC","n3_desc":"Сертификат ЕАЭС на всю линейку.","contact_title":"Свяжитесь с нами","contact_sub":"Готовы обсудить ваш проект. Отвечаем в течение 2 часов","cont_phone":"Телефон","cont_wa":"WhatsApp","cont_email":"Email","cont_tg":"Telegram","footer_p":"Графеновые композитные ролики для Центральной Азии"},"en":{"nav_home":"Home","nav_prod":"Products","nav_tech":"Technology","nav_proj":"Projects","nav_about":"About Us","nav_serv":"Service","nav_news":"News","nav_cont":"Contact","hero_title":"<span>Graphene Roller</span><br>Wear-Resistant & Anti-Corrosion","hero_desc":"High-strength graphene composite rollers for harsh Central Asian conditions. Frost resistance to −40°C, full sealing.","hero_btn1":"Product Catalog","hero_btn2":"Free Inquiry","benefits_title":"Key Benefits","b1_title":"Wear Resistance +300%","b1_desc":"Graphene reinforcement triples service life","b2_title":"Full Sealing","b2_desc":"Dust and water protection for open pits and mines","b3_title":"Frost −40°C","b3_desc":"Adapted for harsh Central Asian winters","b4_title":"Maintenance Free","b4_desc":"Reduced operating costs at mines and plants","home_form_title":"Custom Quote","home_form_sub":"Leave a request — we will find the solution","form_name":"Full Name","form_country":"Country","form_phone":"Phone / WhatsApp","form_email":"Email","form_product":"Product Type","form_msg":"Quantity / Requirements","form_msg_ph":"Quantity, dimensions...","form_btn":"📩 Send Inquiry","p1":"Standard Rollers","p2":"Buffer Rollers","p3":"Self-Aligning","p4":"Anti-Corrosion","p5":"Frost-Resistant","p6":"Full Set","global_title":"Global Presence","global_sub":"Central Asia is our main region","kz":"🇰🇿 Kazakhstan","uz":"🇺🇿 Uzbekistan","kg":"🇰🇬 Kyrgyzstan","tj":"🇹🇯 Tajikistan","tm":"🇹🇲 Turkmenistan","prod_title":"Product Catalog","prod_sub":"Complete range of graphene rollers","prod1_title":"Standard Trough Rollers","prod1_desc":"General purpose rollers with graphene reinforcement. 2–3x longer service life.","prod2_title":"Buffer Rollers","prod2_desc":"Reinforced for mine loading zones. Impact absorption and belt protection.","prod3_title":"Self-Aligning Groups","prod3_desc":"Automatic belt centering. Reduced wear and downtime.","tag_wear":"Wear-Resistant","tag_uni":"Universal","tag_impact":"Impact-Resistant","tag_mine":"Mining","tag_auto":"Automatic","tag_center":"Centering","tech_title":"Our Technology","tech_sub":"Graphene materials confirmed by testing","t1_title":"Graphene Material Science","t1_desc":"Graphene nanoplatelets create multi-layer protection.","t2_title":"Automated Production","t2_desc":"Robotic lines, precision ±0.1mm.","t3_title":"Strength Testing","t3_desc":"Wear +300%, corrosion +400%, elasticity at −40°C.","t4_title":"Patents & Certificates","t4_desc":"ISO 9001:2015, CE, EAC.","proj_title":"Completed Projects","proj_sub":"Central Asia — our key projects","proj1_title":"Coal Mine, Kazakhstan","proj1_desc":"Full graphene replacement. Service life 8→24 months.","proj2_title":"Cement Plant, Uzbekistan","proj2_desc":"Anti-corrosion rollers. 40% savings.","proj3_title":"Mining Complex, Kyrgyzstan","proj3_desc":"Frost-resistant for high altitude. −35°C.","about_title":"About Us","about_p1":"We make conveyor components from graphene composite materials.","about_p2":"Cross-border services: sizing, technical support, customs.","stat1":"m² facilities","stat2":"completed projects","stat3":"export countries","stat4":"CE · EAC","serv_title":"Export Service","serv_sub":"Full support cycle for foreign trade","s1_title":"Custom Manufacturing","s1_desc":"Rollers to your dimensions.","s2_title":"Russian Documentation","s2_desc":"Passports, certificates, customs.","s3_title":"CA Logistics","s3_desc":"Truck, rail and sea transport.","s4_title":"Warranty & Service","s4_desc":"After-sales. On-site support.","s5_title":"Wholesale Discounts","s5_desc":"Special terms for dealers.","s6_title":"PDF Catalog","s6_desc":"Download in Russian or English.","s6_btn":"📥 Download PDF","news_title":"News & Updates","news_sub":"Industry news","n_date1":"Apr 15, 2026","n1_title":"Frost rollers to Kazakhstan","n1_desc":"5,000 sets for Karaganda mine.","n_date2":"Apr 2, 2026","n2_title":"New production line","n2_desc":"Capacity +40%, delivery 15 days.","n_date3":"Mar 18, 2026","n3_title":"EAC Certification","n3_desc":"EAEU certificate for all products.","contact_title":"Contact Us","contact_sub":"Reply within 2 hours","cont_phone":"Phone","cont_wa":"WhatsApp","cont_email":"Email","cont_tg":"Telegram","footer_p":"Graphene composite rollers for Central Asia"},"kk":{"nav_home":"Басты бет","nav_prod":"Өнімдер","nav_tech":"Технологиялар","nav_proj":"Жобалар","nav_about":"Біз туралы","nav_serv":"Қызметтер","nav_news":"Жаңалықтар","nav_cont":"Байланыс","hero_title":"<span>Graphene Roller</span><br>Тозуға төзімді & Коррозияға қарсы","hero_desc":"Орталық Азияға арналған графенді композиттік роликтер. −40°C аяз, толық герметизация.","hero_btn1":"Өнімдер каталогы","hero_btn2":"Тегін сұраныс","benefits_title":"Негізгі артықшылықтар","b1_title":"Тозуға төзімділік +300%","b1_desc":"Графен қызмет мерзімін 3 есе арттырады","b2_title":"Толық герметизация","b2_desc":"Шаң мен судан қорғаныс","b3_title":"−40°C аязға төзімді","b3_desc":"Орталық Азияның суық қыстарына бейімделген","b4_title":"Қызмет көрсетусіз","b4_desc":"Шығындарды азайту","home_form_title":"Жеке ұсыныс","home_form_sub":"Өтініш қалдырыңыз — біз таңдаймыз","form_name":"Аты-жөні","form_country":"Ел","form_phone":"Телефон / WhatsApp","form_email":"Email","form_product":"Өнім түрі","form_msg":"Көлемі / талаптар","form_msg_ph":"Саны, өлшемдері...","form_btn":"📩 Сұраныс жіберу","p1":"Стандартты роликтер","p2":"Буферлік роликтер","p3":"Өздігінен орнатылатын","p4":"Коррозияға төзімді","p5":"Аязға төзімді","p6":"Толық жинақ","global_title":"Әлемдік қатысу","global_sub":"Орталық Азия — негізгі аймақ","kz":"🇰🇿 Қазақстан","uz":"🇺🇿 Өзбекстан","kg":"🇰🇬 Қырғызстан","tj":"🇹🇯 Тәжікстан","tm":"🇹🇲 Түрікменстан","prod_title":"Өнімдер каталогы","prod_sub":"Графенді роликтердің ассортименті","prod1_title":"Стандартты ойықты роликтер","prod1_desc":"Графенді күшейтілген роликтер. Қызмет мерзімі 2–3 есе жоғары.","prod2_title":"Буферлік роликтер","prod2_desc":"Шахталардың тиеу аймағына арналған. Соққыдан қорғайды.","prod3_title":"Өздігінен орнатылатын топтар","prod3_desc":"Лентаны автоматты центрлеу. Тозуды азайту.","tag_wear":"Тозуға төзімді","tag_uni":"Әмбебап","tag_impact":"Соққыға төзімді","tag_mine":"Шахталық","tag_auto":"Автоматты","tag_center":"Центрлеу","tech_title":"Технологиялар","tech_sub":"Графен материалдары сынақтан өткен","t1_title":"Графен материалтану","t1_desc":"Көпқабатты қорғаныс.","t2_title":"Автоматты өндіріс","t2_desc":"Роботты желілер, дәлдік ±0.1 мм.","t3_title":"Беріктік сынақтары","t3_desc":"Тозу +300%, коррозия +400%, −40°C серпімділік.","t4_title":"Патенттер","t4_desc":"ISO 9001:2015, CE, EAC.","proj_title":"Жобалар","proj_sub":"Орталық Азия — негізгі жобалар","proj1_title":"Көмір шахтасы, Қазақстан","proj1_desc":"Графенді роликтерге ауыстыру. 8→24 ай.","proj2_title":"Цемент зауыты, Өзбекстан","proj2_desc":"Коррозияға төзімді. 40% үнемдеу.","proj3_title":"Тау-кен комбинаты, Қырғызстан","proj3_desc":"Аязға төзімді. −35°C жұмыс.","about_title":"Біз туралы","about_p1":"Графенді композиттерден конвейер компоненттерін өндіруші компания.","about_p2":"Трансшекаралық қызметтер: өлшемдер, техқолдау, кеден.","stat1":"м² өндіріс","stat2":"жоба","stat3":"ел","stat4":"CE · EAC","serv_title":"Экспорттық қызмет","serv_sub":"Сыртқы сауданы толық қолдау","s1_title":"Жеке өндіріс","s1_desc":"Сіздің өлшемдеріңіз бойынша.","s2_title":"Құжаттама","s2_desc":"Паспорттар, сертификаттар, кеден.","s3_title":"Логистика","s3_desc":"ОА-ға авто, теміржол, теңіз тасымалы.","s4_title":"Кепілдік","s4_desc":"Сатудан кейінгі қызмет.","s5_title":"Жеңілдіктер","s5_desc":"Дилерлерге арнайы шарттар.","s6_title":"PDF каталог","s6_desc":"Орыс немесе ағылшын тілінде.","s6_btn":"📥 PDF жүктеу","news_title":"Жаңалықтар","news_sub":"Сала жаңалықтары","n_date1":"15.04.2026","n1_title":"Аязға төзімді роликтер Қазақстанға","n1_desc":"5000 жинақ, Қарағанды.","n_date2":"02.04.2026","n2_title":"Жаңа өндіріс желісі","n2_desc":"Қуат +40%, жеткізу 15 күн.","n_date3":"18.03.2026","n3_title":"EAC сертификациясы","n3_desc":"ЕАО сертификаты.","contact_title":"Байланыс","contact_sub":"2 сағат ішінде жауап","cont_phone":"Телефон","cont_wa":"WhatsApp","cont_email":"Email","cont_tg":"Telegram","footer_p":"Орталық Азияға арналған графенді роликтер"}};
 let currentLang = 'ru';
 
 function setLang(lang) {
@@ -748,7 +380,6 @@ function submitForm(e) {
   fetch('https://api.telegram.org/bot8747143105:AAFsACJsDNcLyYsLLLq3yko-YwBKwk_tXOs/sendMessage',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:1021284482,text:msg})}).then(r=>r.json()).then(()=>{btn.textContent='✓';setTimeout(()=>{btn.textContent=orig;btn.disabled=false;e.target.reset();setLang(currentLang)},2000)}).catch(()=>{btn.textContent='✗';setTimeout(()=>{btn.textContent=orig;btn.disabled=false},2000)});
 }
 
-// Auto-init
 setLang('ru');
 </script>
 </body>

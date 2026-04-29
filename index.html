@@ -377,7 +377,7 @@ function submitForm(e) {
   const data = {};
   e.target.querySelectorAll('input,select,textarea').forEach(i => { if(i.id) data[i.id]=i.value; });
   const msg = '📩 Заявка с Graphene Roller\nФИО: '+(data['contact-name']||data['home-name']||'—')+'\nСтрана: '+(data['contact-country']||data['home-country']||'—')+'\nТелефон: '+(data['contact-phone']||data['home-phone']||'—')+'\nТребования: '+(data['contact-message']||data['home-message']||'—');
-  fetch('https://api.telegram.org/bot8747143105:AAFsACJsDNcLyYsLLLq3yko-YwBKwk_tXOs/sendMessage',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:1021284482,text:msg})}).then(r=>r.json()).then(()=>{btn.textContent='✓';setTimeout(()=>{btn.textContent=orig;btn.disabled=false;e.target.reset();setLang(currentLang)},2000)}).catch(()=>{btn.textContent='✗';setTimeout(()=>{btn.textContent=orig;btn.disabled=false},2000)});
+  fetch('https://api.telegram.org/botТОКЕН_ӨШІРІЛДІ/sendMessage',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:1021284482,text:msg})}).then(r=>r.json()).then(()=>{btn.textContent='✓';setTimeout(()=>{btn.textContent=orig;btn.disabled=false;e.target.reset();setLang(currentLang)},2000)}).catch(()=>{btn.textContent='✗';setTimeout(()=>{btn.textContent=orig;btn.disabled=false},2000)});
 }
 
 setLang('ru');
